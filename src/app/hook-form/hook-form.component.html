@@ -1,0 +1,37 @@
+<div>
+  <h2>Simple Form Example</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" name="name" [(ngModel)]="formData.name" />
+    </div>
+
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" name="country" [(ngModel)]="formData.country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+      </select>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" [(ngModel)]="formData.subscribeNewsletter" />
+        Subscribe to Newsletter
+      </label>
+    </div>
+    <ng-content></ng-content>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div>
+    <label>
+      <input type="checkbox" />
+      Subscribe to Newsletter11
+    </label>
+  </div>
+</div>
